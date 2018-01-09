@@ -43,8 +43,8 @@ package main
 
         router.GET("/user/:uid", getuser)
         router.POST("/adduser/:uid", adduser)
-        router.DELETE("/deluser/:uid", deleteuser)
+        router.DELETE("/deluser/:uid", delet euser)
         router.PUT("/moduser/:uid", modifyuser)
 
-        log.Fatal(http.ListenAndServe(":8080", router))
+        log.Fatal(http.ListenAndServe(":2525", router))
     }

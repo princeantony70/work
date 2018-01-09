@@ -19,7 +19,7 @@ func sayhelloName(w http.ResponseWriter, r *http.Request) {
         fmt.Println("key:", k)
         fmt.Println("val:", strings.Join(v, ""))
     }
-    fmt.Fprintf(w, "Hello astaxie!") // write data to response
+    fmt.Fprintf(w, "Hello astaxie ....!") // write data to response
 }
 
 func login(w http.ResponseWriter, r *http.Request) {
@@ -36,9 +36,8 @@ func login(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-    http.HandleFunc("/", sayhelloName) // setting router rule
-    http.HandleFunc("/login", login)
-    err := http.ListenAndServe(":9090", nil) // setting listening port
+  http.HandleFunc("/login", login)
+    err := http.ListenAndServe(":9091", nil) // setting listening port
     if err != nil {
         log.Fatal("ListenAndServe: ", err)
     }
